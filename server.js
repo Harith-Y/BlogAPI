@@ -11,6 +11,12 @@ mongoose
 
 //Middleware
 app.use(express.json());
+
+// Task routes
+const tasksRouter = require("./routes/Tasks");
+app.use("/tasks", tasksRouter);
+
+//Blog routes
 const blogsRouter = require("./routes/blogs");
 app.use("/blogs", blogsRouter);
 
